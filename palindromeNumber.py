@@ -15,6 +15,8 @@ Explanation : reverse of number is 2321 which is not equal to original number
 def isPalindrome(num):
     temp = num
     sum = 0
+    if num < 0:
+        return False
     while(temp !=0):
         digit = temp % 10
         sum = sum * 10 + digit
