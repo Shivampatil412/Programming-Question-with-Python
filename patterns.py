@@ -1,5 +1,5 @@
 
-import math
+
 n = int(input("Enter Number:"))
 
 '''
@@ -205,6 +205,140 @@ def pattern10(n):
         print()
 
 
+''' 
+Pattern 11:
+
+    *
+   **
+  ***
+ ****
+*****
+'''
+
+
+def pattern11(n):
+    for row in range(0,n+1):
+        spaces = n - row
+        for space in range(0, spaces):
+            print(end = " ")
+        for col in range(0, row):
+            print("*",end = "")
+        print()
+
+'''
+pattern 12: 
+
+*****
+ ****
+  ***
+   **
+    *
+'''
+
+def pattern12(n):
+    for row in range(0,n+1):
+        for space in range(0, row):
+            print(end = " ")
+        for col in range(0, n-row):
+            print("*",end = "")
+        print()
+        
+'''
+Pattern13:
+    *
+   ***
+  *****
+ *******
+*********
+'''
+
+def pattern13(n):
+    for row in range(0,n):
+        for space in range(0, n-row):
+            print(end = "  ")
+        cols = row * 2 + 1 
+        for col in range(0,cols):
+            print("*",end = " ")
+        print()
+
+'''
+Pattern 14: 
+    *********
+     *******
+      *****
+       ***
+        *
+'''
+def pattern14(n):
+    for row in range(0,n):
+        for space in range(0, row):
+            print(end = "  ")
+        cols = (n*2) - (row * 2 + 1) 
+        for col in range(0,cols):
+            print("*",end = " ")
+        print()
+
+'''
+Pattern 15:
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+'''
+
+def pattern15(n):
+    for row in range(0,n):
+        for space in range(0, n-row):
+            print(end =" ")
+        for col in range(0, row+1):
+            print("*",end = " ")
+        print()
+
+'''
+Pattern 16:
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+
+'''
+
+def pattern16(n):
+    for row in range(0,n):
+        for space in range(0, row):
+            print(end =" ")
+        for col in range(0, n-row):
+            print("*",end = " ")
+        print()
+        
+'''
+Pattern 17:
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+
+'''
+
+def pattern17(n):
+    for row in range(0,2*n):
+        spaces = row+1 if row < n else 2*n - row
+        for space in range(0,spaces):
+            print(end =" ")
+        cols = n - row if row < n else row+1 - n
+        for col in range(0,cols):
+            print("*",end =" ")
+        print()
+
+       
 pattern1(n)
 print()
 pattern2(n)
@@ -224,5 +358,18 @@ print()
 pattern9(n)
 print()
 pattern10(n)
-        
-        
+print()
+pattern11(n)
+print()
+pattern12(n)
+print()      
+pattern13(n)
+print() 
+pattern14(n)
+print() 
+pattern15(n)
+print()
+pattern16(n)
+print()
+pattern17(n)
+print()      
