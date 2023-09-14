@@ -1,5 +1,4 @@
 
-
 n = int(input("Enter Number:"))
 
 '''
@@ -337,6 +336,44 @@ def pattern17(n):
         for col in range(0,cols):
             print("*",end =" ")
         print()
+        
+'''
+Pattern 18:
+         *
+        * *
+       *   *
+      *     *
+     *********
+'''
+
+def pattern18(n):
+    for row in range(0,n):
+        for col in range(0,n*2-1):
+            if col == n-1 - row  or col == n + row-1  or row+1 == n :
+                print("*",end = "")
+            else:
+                print(" ", end = "")
+        print()
+        
+'''
+Pattern 19:
+
+     *********
+      *     *
+       *   *
+        * *
+         *
+
+'''
+
+def pattern19(n):
+    for row in range(n,-1,-1):
+        for col in range(0,n*2-1):
+            if col == n-1 - row  or col == n + row-1  or row+1 == n:
+                print("*",end = "")
+            else:
+                print(" ", end = "")
+        print()
 
        
 pattern1(n)
@@ -372,4 +409,8 @@ print()
 pattern16(n)
 print()
 pattern17(n)
-print()      
+print()
+pattern18(n)
+print()
+pattern19(n)
+print()       
